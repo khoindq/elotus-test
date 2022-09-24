@@ -5,12 +5,12 @@ import (
 )
 
 func findLength(nums1 []int, nums2 []int) int {
-	la := len(nums1)
-	lb := len(nums2)
-	d1 := make([]int, lb+1)
+	length_nums1 := len(nums1)
+	length_nums2 := len(nums2)
+	d1 := make([]int, length_nums2+1)
 	res := 0
-	for i := la - 1; i >= 0; i-- {
-		for j := 0; j < lb; j++ {
+	for i := length_nums1 - 1; i >= 0; i-- {
+		for j := 0; j < length_nums2; j++ {
 			if nums1[i] == nums2[j] {
 				d1[j] = d1[j+1] + 1
 				if d1[j] > res {
@@ -46,7 +46,6 @@ func grayCode(n int) []int {
 }
 
 func main() {
-
-	fmt.Println("run go test")
+	fmt.Println("type go test")
 
 }
